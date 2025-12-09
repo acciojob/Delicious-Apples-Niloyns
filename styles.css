@@ -1,1 +1,227 @@
 /* your code here */
+/* styles.css */
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MAIN PRODUCT LAYOUT */
+.product {
+  display: flex;
+  gap: 30px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* LEFT: PHOTO AREA */
+.product__photo {
+  flex: 1 1 45%;
+}
+
+.photo-container {
+  background: linear-gradient(135deg, #7bdc60, #4caf50);
+  border-radius: 18px;
+  padding: 20px;
+}
+
+/* MAIN PHOTO */
+.photo-main {
+  position: relative;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+}
+
+.photo-main img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ICONS */
+.controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ffffff;
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+}
+
+/* THUMBNAIL ALBUM */
+.photo-album {
+  margin-top: 15px;
+}
+
+.photo-album ul {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.photo-album li {
+  list-style: none;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.photo-album li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.photo-album img {
+  display: block;
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+/* RIGHT: INFO AREA */
+.product__info {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* TITLE */
+.title h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.title span {
+  font-size: 12px;
+  color: #888;
+}
+
+/* PRICE */
+.price {
+  margin: 20px 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.price span {
+  font-size: 28px;
+}
+
+/* VARIANTS */
+.variant {
+  margin: 15px 0 25px;
+}
+
+.variant h3 {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.variant ul {
+  display: flex;
+  gap: 10px;
+}
+
+.variant li {
+  list-style: none;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  padding: 4px;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s;
+  background: #f2f2f2;
+}
+
+.variant li:hover {
+  border-color: #4caf50;
+  transform: translateY(-2px);
+}
+
+.variant img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* BENEFITS SECTION */
+.description {
+  margin-top: 10px;
+  padding: 15px 0 0;
+  border-top: 1px solid #eee;
+}
+
+/* Title "BENEFITS" via heading or fallback via ::before */
+.description::before {
+  content: "BENEFITS";
+  display: block;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: bold;
+}
+
+.description p,
+.description ul {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* ADD TO CART (display-only) */
+.add-to-cart {
+  margin-top: 20px;
+}
+
+.add-to-cart button {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-radius: 25px;
+  background: #ff9800;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s, transform 0.1s;
+}
+
+.add-to-cart button:hover {
+  background: #fb8c00;
+}
+
+.add-to-cart button:active {
+  transform: translateY(1px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+  .product {
+    flex-direction: column;
+  }
+}
